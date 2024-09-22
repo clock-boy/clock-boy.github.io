@@ -13,7 +13,7 @@
         </nav>
     </header>
 
-    <div id="app" style="right: 5px; bottom: 5px; position: fixed;"></div>
+    <div id="app" style="right: 5px; top: 5px; position: fixed;"></div>
     <script src="https://unpkg.com/webamp"></script>
     <script>
     const Webamp = window.Webamp;
@@ -42,6 +42,24 @@
             }
         ]
     });
+    windowLayout: {
+    main: {
+      position: { top: 0, left: 0 },
+      shadeMode: true,
+      closed: false,
+    },
+    equalizer: {
+      position: { top: 0, left: 0 },
+      shadeMode: true,
+      closed: true,
+    },
+    playlist: {
+      position: { top: 0, left: 0 },
+      shadeMode: true,
+      // Number of additional sprites by which to expand the window.
+      size: { extraHeight: 1, extraHeight: 10 },
+      closed: false,
+    },
     webamp.renderWhenReady(document.getElementById("app"));
 </script>
 </body>
