@@ -6,11 +6,43 @@
 </head>
 <body>
     <header>
-        <nav>
+        <nav style="text-align: center; position: sticky;"">
             <a href="/index.html">Home</a>
             <a href="/cole.html">Cole's Page</a>
             <a href="/uno.html">Uno's Page</a>
         </nav>
     </header>
+
+    <div id="app" style="right: 5px; bottom: 5px; position: fixed;"></div>
+    <script src="https://unpkg.com/webamp"></script>
+    <script>
+    const Webamp = window.Webamp;
+    const webamp = new Webamp({
+        intialTracks: [
+            {
+                metaData: {
+                    artist: "21 Pilots",
+                    title: "Overcompensate",
+                },
+                url: "https://clock-boy.github.io/Twenty One Pilots - Overcompensate.mp3",
+            },
+            {
+                metaData: {
+                    artist: "Apocalypticism",
+                    title: "Moon Walker",
+                },
+                url: "https://clock-boy.github.io/Moon Walker- Apocalypticism.mp3",
+            },
+            {
+                metaData: {
+                    artist: "Hozier",
+                    title: "Nobody's Solder",
+                },
+                url: "https://clock-boy.github.io/Hozier-NobodysSoldier.mp3",
+            }
+        ]
+    });
+    webamp.renderWhenReady(document.getElementById("app"));
+</script>
 </body>
 </html>
